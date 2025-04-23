@@ -1,7 +1,6 @@
 context:
   name: dayplot
-  version: "0.3.2"
-  python_min: "3.13"
+  version: "0.3.3"
 
 package:
   name: ${{ name|lower }}
@@ -9,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
-  sha256: b26e4c1f718ded1ba4afa57043e6139038825b55b375ca8c2a3d089344fef0a5
+  sha256: deceb31f5d18d5fc721262198ed0b3a42594a00162039b405b1a93e44884f6b6
 
 build:
   noarch: python
@@ -28,7 +27,7 @@ requirements:
 tests:
   - python:
       imports:
-      - dayplot
+        - dayplot
       pip_check: true
       python_version: ${{ python_min }}.*
 
