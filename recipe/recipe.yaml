@@ -1,6 +1,6 @@
 context:
   name: dayplot
-  version: "0.3.3"
+  version: "0.4.2"
 
 package:
   name: ${{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
-  sha256: deceb31f5d18d5fc721262198ed0b3a42594a00162039b405b1a93e44884f6b6
+  sha256: e91405265db2a90a52076c9541cd61c855785fe1100579ccf35022eded72ef7f
 
 build:
   noarch: python
@@ -23,6 +23,7 @@ requirements:
   run:
     - python >=${{ python_min }}
     - matplotlib-base
+    - narwhals >=1.0
 
 tests:
   - python:
@@ -32,14 +33,15 @@ tests:
       python_version: ${{ python_min }}.*
 
 about:
-  homepage: https://josephbarbierdarnal.github.io/dayplot/
+  homepage: https://y-sunflower.github.io/dayplot/
   summary: 'Build calendar heatmaps with ease'
   description: |
     A simple-to-use Python library to build calendar heatmaps with ease.
     It's built on top of matplotlib and leverages it to access high customization possibilities.
   license: MIT
   license_file: LICENSE
-  repository: https://github.com/JosephBARBIERDARNAL/dayplot
+  repository: https://github.com/y-sunflower/dayplot
+  documentation: https://y-sunflower.github.io/dayplot/reference/calendar/
 
 extra:
   recipe-maintainers:
