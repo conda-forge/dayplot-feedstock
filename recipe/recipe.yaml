@@ -1,6 +1,6 @@
 context:
   name: dayplot
-  version: "0.6.0"
+  version: "0.7.0"
 
 package:
   name: ${{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
-  sha256: 41d9d24d800e427bd126f8f4fa6d4f28ef53fcc332de1c25b737a9759470af3d
+  sha256: 54226e4f227a57c803a9f16c443b1e7fcf06a50255eb68724f65dacbdda58831
 
 build:
   noarch: python
